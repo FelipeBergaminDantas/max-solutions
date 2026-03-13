@@ -110,7 +110,7 @@ export default function Clients() {
                           Adicione o vídeo aqui usando um iframe do YouTube/Vimeo
                         </p>
                         <p className="text-xs text-gray-400 mt-3 hidden sm:block">
-                          Exemplo: &lt;iframe src="URL_DO_VIDEO" ...&gt;&lt;/iframe&gt;
+                          Exemplo: &lt;iframe src={"URL_DO_VIDEO"} ...&gt;&lt;/iframe&gt;
                         </p>
                       </div>
                       
