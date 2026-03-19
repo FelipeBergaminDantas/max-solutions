@@ -11,7 +11,7 @@ export default function Footer() {
               Max <span className="text-primary-green">Solutions & Performance</span>
             </h3>
             <p className="text-gray-400 text-sm">
-              Transformamos dados em faturamento. Consultoria certificada Mercado Livre.
+              Consultoria especializada em performance e crescimento no Mercado Livre. Transformamos dados em lucro real.
             </p>
           </div>
 
@@ -24,18 +24,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#diferenciais" className="text-gray-400 hover:text-primary-green transition-colors">
+                  Diferenciais
+                </Link>
+              </li>
+              <li>
                 <Link href="#sobre-nos" className="text-gray-400 hover:text-primary-green transition-colors">
-                  Sobre Nós
+                  A Liderança
                 </Link>
               </li>
               <li>
                 <Link href="#clientes" className="text-gray-400 hover:text-primary-green transition-colors">
-                  Nossos Clientes
+                  Resultados
                 </Link>
               </li>
               <li>
                 <Link href="#contato" className="text-gray-400 hover:text-primary-green transition-colors">
-                  Contato
+                  Fale Conosco
                 </Link>
               </li>
             </ul>
@@ -44,9 +49,16 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>WhatsApp: (11) 99999-9999</li>
-              <li>Email: contato@maxsolutions.com.br</li>
-              <li>Instagram: @maxsolutions</li>
+              <li>
+                <a href="https://wa.me/5511947628089" target="_blank" rel="noopener noreferrer" className="hover:text-primary-green transition-colors">
+                  WhatsApp: +55 11 94762-8089
+                </a>
+              </li>
+              <li>
+                <a href="https://mail.google.com/mail/?view=cm&to=contato@maxsolutions.com.br" className="hover:text-primary-green transition-colors">
+                  contato@maxsolutions.com.br
+                </a>
+              </li>
             </ul>
           </div>
 

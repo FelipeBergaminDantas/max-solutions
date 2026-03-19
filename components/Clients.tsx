@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { TrendingUp, Target, DollarSign, Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { TrendingUp, Target, DollarSign, ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Clients() {
-  const [showVideo, setShowVideo] = useState(false);
+  const [showPrints, setShowPrints] = useState(false);
 
   return (
     <section id="clientes" className="py-16 sm:py-20 md:py-24 bg-neutral-light text-primary-dark overflow-hidden">
@@ -12,10 +13,10 @@ export default function Clients() {
         <div className="max-w-[1600px] mx-auto">
           <div className="text-center mb-10 sm:mb-12 px-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5">
-              Resultados <span className="text-primary-green">Comprovados</span>
+              Performance não é promessa. <span className="text-primary-green">É entrega.</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700">
-              Performance não é promessa. É entrega.
+              Como dobramos a eficiência de uma operação com apenas 8% de aumento em visitas.
             </p>
           </div>
 
@@ -24,41 +25,44 @@ export default function Clients() {
             <div className="relative overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: showVideo ? 'translateX(-100%)' : 'translateX(0)' }}
+                style={{ transform: showPrints ? 'translateX(-100%)' : 'translateX(0)' }}
               >
                 {/* Slide 1: Resultados */}
                 <div className="w-full flex-shrink-0 pr-4 sm:pr-6 md:pr-8">
                   <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
                     <div>
-                      <div className="inline-block bg-primary-green/10 text-primary-green px-4 py-2 rounded-full text-sm md:text-base font-semibold mb-4">
-                        Segmento: Joias e Anéis
+                      <div className="flex flex-wrap gap-3 mb-4">
+                        <div className="inline-block bg-primary-blue/10 text-primary-blue px-4 py-2 rounded-full text-sm md:text-base font-semibold">
+                          Loja: Tudo Pratas
+                        </div>
+                        <div className="inline-block bg-primary-green/10 text-primary-green px-4 py-2 rounded-full text-sm md:text-base font-semibold">
+                          Segmento: Joias e Anéis
+                        </div>
                       </div>
                       
                       <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-primary-dark">
-                        De estagnação para crescimento exponencial
+                        Conta estagnada transformada em operação de alta performance
                       </h3>
 
                       <div className="space-y-3 sm:space-y-4">
                         <div>
-                          <h4 className="text-primary-green font-semibold mb-1 text-base md:text-lg lg:text-xl">Desafio</h4>
+                          <h4 className="text-primary-green font-semibold mb-1 text-base md:text-lg lg:text-xl">O Desafio</h4>
                           <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                            Loja com vendas estagnadas, alto custo com anúncios e baixo retorno sobre investimento.
+                            Conta estagnada, com alto gasto em publicidade e baixa conversão por anúncio.
                           </p>
                         </div>
 
                         <div>
-                          <h4 className="text-primary-green font-semibold mb-1 text-base md:text-lg lg:text-xl">Diagnóstico</h4>
+                          <h4 className="text-primary-green font-semibold mb-1 text-base md:text-lg lg:text-xl">A Estratégia</h4>
                           <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                            Análise completa revelou oportunidades em otimização de anúncios, 
-                            estruturação de catálogo e estratégia de precificação.
+                            Reestruturação visual do catálogo, aplicação de design de alta conversão e ajuste fino da precificação.
                           </p>
                         </div>
 
                         <div>
-                          <h4 className="text-primary-green font-semibold mb-1 text-base md:text-lg lg:text-xl">Estratégia Aplicada</h4>
+                          <h4 className="text-primary-green font-semibold mb-1 text-base md:text-lg lg:text-xl">O Resultado</h4>
                           <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                            Reestruturação completa de campanhas, otimização de ROI, 
-                            análise de concorrência e implementação de estratégias baseadas em dados.
+                            Dobramos a conversão de 2,7% para 5,4% com apenas 8% de aumento em visitas — mais eficiência, menos desperdício.
                           </p>
                         </div>
                       </div>
@@ -68,23 +72,23 @@ export default function Clients() {
                       <div className="space-y-3 sm:space-y-4">
                         <ResultCard
                           icon={<TrendingUp className="w-7 h-7 md:w-8 md:h-8" />}
-                          label="Crescimento em Faturamento"
-                          value="3x"
-                          description="Triplicou em menos de 6 meses"
+                          label="Quantidade de Vendas"
+                          value="+114%"
+                          description="Aumento na quantidade de vendas"
                           color="green"
                         />
                         <ResultCard
                           icon={<Target className="w-7 h-7 md:w-8 md:h-8" />}
-                          label="Redução de Custo"
-                          value="-35%"
-                          description="Custo por conversão otimizado"
+                          label="Faturamento Bruto"
+                          value="+85%"
+                          description="Crescimento no faturamento bruto"
                           color="blue"
                         />
                         <ResultCard
                           icon={<DollarSign className="w-7 h-7 md:w-8 md:h-8" />}
-                          label="ROI"
-                          value="+180%"
-                          description="Retorno sobre investimento"
+                          label="Taxa de Conversão"
+                          value="2x"
+                          description="De 2,7% para 5,4% de conversão"
                           color="green"
                         />
                       </div>
@@ -92,37 +96,22 @@ export default function Clients() {
                   </div>
                 </div>
 
-                {/* Slide 2: Vídeo */}
+                {/* Slide 2: Imagem de Resultado */}
                 <div className="w-full flex-shrink-0 px-4 sm:px-6 md:px-8">
                   <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-6 sm:mb-8">
-                      <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-primary-dark">Depoimento do Cliente</h3>
-                      <p className="text-gray-700 text-sm md:text-base lg:text-lg">Veja o que nossos clientes têm a dizer</p>
+                      <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-primary-dark">Resultados Reais</h3>
+                      <p className="text-gray-700 text-sm md:text-base lg:text-lg">Print dos resultados da Tudo Pratas</p>
                     </div>
 
-                    {/* Container do vídeo */}
-                    <div className="relative aspect-video bg-gradient-to-br from-primary-dark to-primary-blue rounded-xl overflow-hidden border-2 border-primary-green/20">
-                      {/* Placeholder para o vídeo */}
-                      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 sm:p-8 text-white">
-                        <Play className="w-16 h-16 sm:w-20 sm:h-20 mb-4 text-primary-green" />
-                        <p className="text-base md:text-lg mb-2">Vídeo do Cliente</p>
-                        <p className="text-sm text-gray-300">
-                          Adicione o vídeo aqui usando um iframe do YouTube/Vimeo
-                        </p>
-                        <p className="text-xs text-gray-400 mt-3 hidden sm:block">
-                          Exemplo: &lt;iframe src={"URL_DO_VIDEO"} ...&gt;&lt;/iframe&gt;
-                        </p>
-                      </div>
-                      
-                      {/* Descomente e adicione a URL do vídeo quando estiver pronto:
-                      <iframe
-                        src="https://www.youtube.com/embed/SEU_VIDEO_ID"
-                        title="Depoimento Cliente"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute inset-0 w-full h-full"
+                    <div className="relative w-full rounded-xl overflow-hidden border-2 border-primary-green/20 shadow-lg">
+                      <Image
+                        src="/result_tudo_prata.png"
+                        alt="Resultados Tudo Pratas"
+                        width={1200}
+                        height={800}
+                        className="w-full h-auto object-contain"
                       />
-                      */}
                     </div>
                   </div>
                 </div>
@@ -132,9 +121,9 @@ export default function Clients() {
             {/* Botões de navegação */}
             <div className="flex justify-center gap-4 mt-6 sm:mt-8">
               <button
-                onClick={() => setShowVideo(false)}
+                onClick={() => setShowPrints(false)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all ${
-                  !showVideo 
+                  !showPrints 
                     ? 'bg-primary-green text-primary-dark' 
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
@@ -143,14 +132,14 @@ export default function Clients() {
                 Ver Resultados
               </button>
               <button
-                onClick={() => setShowVideo(true)}
+                onClick={() => setShowPrints(true)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all ${
-                  showVideo 
+                  showPrints 
                     ? 'bg-primary-green text-primary-dark' 
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
-                Ver Depoimento
+                Ver Prints
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
@@ -158,16 +147,16 @@ export default function Clients() {
             {/* Indicadores */}
             <div className="flex justify-center gap-2 mt-5">
               <button
-                onClick={() => setShowVideo(false)}
+                onClick={() => setShowPrints(false)}
                 className={`h-2 rounded-full transition-all ${
-                  !showVideo ? 'w-8 bg-primary-green' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  !showPrints ? 'w-8 bg-primary-green' : 'w-2 bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label="Ver resultados"
               />
               <button
-                onClick={() => setShowVideo(true)}
+                onClick={() => setShowPrints(true)}
                 className={`h-2 rounded-full transition-all ${
-                  showVideo ? 'w-8 bg-primary-green' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  showPrints ? 'w-8 bg-primary-green' : 'w-2 bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label="Ver depoimento"
               />

@@ -8,46 +8,36 @@ export default function Company() {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-8 sm:mb-10 md:mb-12">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 relative mb-6 sm:mb-8 bg-gradient-to-br from-primary-dark to-primary-blue rounded-2xl flex items-center justify-center">
-              {/* Logo será adicionado aqui */}
-              <div className="text-white text-center p-4">
-                <p className="text-xs sm:text-sm mb-2">Logo da Empresa</p>
-                <p className="text-xs text-gray-300">Adicionar em: public/logo.png</p>
-              </div>
-              {/* Descomente quando adicionar o logo:
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 relative mb-6 sm:mb-8">
               <Image
                 src="/logo.png"
                 alt="Max Solutions & Performance"
                 fill
-                className="object-contain p-8"
+                className="object-contain"
               />
-              */}
             </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-center px-4">
-              Sobre a <span className="text-primary-green">Max Solutions & Performance</span>
+              Muito além do faturamento.{' '}
+              <span className="text-primary-green">Estratégia 360º para quem busca lucro real e segurança.</span>
             </h2>
           </div>
 
-          <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none text-gray-700 leading-relaxed px-4">
-            <p className="mb-4 sm:mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <div className="max-w-[1400px] mx-auto px-4 lg:px-8 text-center">
+            <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-700 leading-relaxed">
+              Na Max Solutions & Performance, nós fugimos do óbvio. Enquanto o mercado foca apenas em aumentar o faturamento — muitas vezes sacrificando a margem —, nós focamos no que realmente importa: o <strong>aumento do lucro líquido</strong> e a <strong>eficiência da sua operação</strong>.
             </p>
             
-            <p className="mb-4 sm:mb-6">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-700 leading-relaxed">
+              O jogo do Mercado Livre não é apenas sobre vender mais; é sobre <strong>vender com inteligência</strong>, <strong>diminuir reclamações</strong> e <strong>dominar a taxa de conversão</strong>. Não vendemos milagres de curto prazo ou promessas vazias. Acreditamos que a chave para o sucesso sustentável é a união entre <strong>consciência e estratégia</strong>.
             </p>
             
-            <p className="mb-4 sm:mb-6">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-700 leading-relaxed">
+              Unimos a <strong>precisão técnica</strong> com o domínio de ferramentas que a maioria dos sellers ignora para garantir que sua conta cresça com <strong>segurança e rentabilidade</strong>.
             </p>
             
-            <p className="mb-4 sm:mb-6">
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-            </p>
-            
-            <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              Se você busca uma consultoria que entende que <strong>faturamento sem lucro é apenas vaidade</strong>, você está no lugar certo.
             </p>
           </div>
         </div>

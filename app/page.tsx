@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Company from '@/components/Company';
+import Differentials from '@/components/Differentials';
 import About from '@/components/About';
 import Clients from '@/components/Clients';
 import Contact from '@/components/Contact';
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Company />
+      <Differentials />
       <About />
       <Clients />
       <Contact />

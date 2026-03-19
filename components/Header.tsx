@@ -35,11 +35,14 @@ export default function Header() {
             <Link href="#empresa" className="text-sm font-medium hover:text-primary-green transition-colors">
               A Empresa
             </Link>
+            <Link href="#diferenciais" className="text-sm font-medium hover:text-primary-green transition-colors">
+              Diferenciais
+            </Link>
             <Link href="#sobre-nos" className="text-sm font-medium hover:text-primary-green transition-colors">
-              Sobre Nós
+              A Liderança
             </Link>
             <Link href="#clientes" className="text-sm font-medium hover:text-primary-green transition-colors">
-              Clientes
+              Resultados
             </Link>
             <Link 
               href="#contato" 

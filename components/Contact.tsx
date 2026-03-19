@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, MessageCircle, Instagram } from 'lucide-react';
+import { Mail, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -9,49 +9,41 @@ export default function Contact() {
         <div className="max-w-[1600px] mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 sm:mb-6 px-4">
             Pronto para transformar sua loja em uma{' '}
-            <span className="text-primary-green">máquina de performance</span>?
+            <span className="text-primary-green">máquina de lucro</span>?
           </h2>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-5 px-4">
-            Pare de perder dinheiro com estratégia errada.
+            Pare de queimar verba com estratégias que não convertem.
           </p>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 mb-10 sm:mb-12 px-4">
-            Performance não é custo. É investimento.
+            Solicite agora um diagnóstico da sua operação e descubra exatamente onde estão os gargalos que impedem sua conta de escalar.
           </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 mb-10 sm:mb-12 px-4">
+          <div className="grid sm:grid-cols-2 gap-5 sm:gap-6 max-w-2xl mx-auto mb-10 sm:mb-12 px-4">
             <ContactCard
               icon={<MessageCircle className="w-8 h-8 md:w-10 md:h-10" />}
               title="WhatsApp"
-              description="Fale diretamente conosco"
-              link="https://wa.me/5511999999999"
+              description="+55 11 94762-8089"
+              link="https://wa.me/5511947628089"
               linkText="Enviar mensagem"
             />
             <ContactCard
               icon={<Mail className="w-8 h-8 md:w-10 md:h-10" />}
               title="Email"
               description="contato@maxsolutions.com.br"
-              link="mailto:contato@maxsolutions.com.br"
+              link="https://mail.google.com/mail/?view=cm&to=contato@maxsolutions.com.br"
               linkText="Enviar email"
-            />
-            <ContactCard
-              icon={<Instagram className="w-8 h-8 md:w-10 md:h-10" />}
-              title="Instagram"
-              description="Acompanhe nosso conteúdo"
-              link="https://instagram.com/maxsolutions"
-              linkText="Seguir no Instagram"
             />
           </div>
 
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-8 sm:p-10 mx-4">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5">Diagnóstico Gratuito</h3>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">
-              Nos chame e alavanque seus resultados. Análise completa da sua operação 
-              no Mercado Livre sem compromisso.
+              Solicite agora um diagnóstico da sua operação e descubra exatamente onde estão os gargalos que impedem sua conta de escalar.
             </p>
             <a 
-              href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um diagnóstico gratuito."
+              href="https://wa.me/5511947628089?text=Olá! Gostaria de solicitar um diagnóstico gratuito."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary-green hover:bg-primary-green/90 text-primary-dark px-8 sm:px-10 py-4 sm:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl transition-all shadow-lg hover:shadow-xl"

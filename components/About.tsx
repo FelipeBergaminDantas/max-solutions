@@ -2,18 +2,19 @@
 
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const teamMembers = [
   {
     name: "Max Augusto",
-    role: "Fundador & Estrategista",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    image: "/team/max.jpg"
+    role: "Fundador & Estrategista de Conversão",
+    description: "Técnico em Automação Industrial e integrante da turma de Engenharia Mecatrônica da USP (2019). Em paralelo à sua jornada na engenharia, dedicou-se a decodificar os algoritmos de marketplace, desenvolvendo métodos validados para alavancar vendas. Há mais de 6 anos atuando na linha de frente do crescimento de sellers no Mercado Livre, sua especialidade é guiar operações desde o nível Mercado Líder até o cobiçado Mercado Líder Platinum. Max é a mente focada em transformar visitantes em compradores, sendo um dos responsáveis diretos pelas estratégias de aumento de conversão e posicionamento de clientes como os maiores vendedores de suas categorias.",
+    image: "/team/max.jpeg"
   },
   {
     name: "Carlos Eduardo",
-    role: "Consultor Estratégico",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    role: "Fundador & Head de Operações e Ads",
+    description: "Com forte base técnica construída na turma de Engenharia Mecatrônica da USP (2019) e experiência sólida atuando em grandes corretoras do mercado financeiro, Carlos traz uma capacidade analítica fora da curva e uma habilidade gigantesca para a resolução de problemas complexos. Ele é a peça-chave que enxerga o e-commerce através dos números, sendo um dos responsáveis pela gestão de alta performance em campanhas de Ads, garantindo que cada centavo investido retorne em forma de lucro real e seguro para a operação.",
     image: "/team/carlos.jpg"
   }
 ];
@@ -37,29 +38,20 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-14 md:mb-16 px-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-              Sobre <span className="text-primary-green">Nós</span>
+              A <span className="text-primary-green">Liderança</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             {/* Foto à esquerda */}
             <div className="relative px-4 sm:px-0">
-              <div className="aspect-square w-full max-w-sm sm:max-w-md mx-auto bg-gradient-to-br from-primary-dark to-primary-blue rounded-2xl overflow-hidden">
-                {/* Placeholder para foto - substituir quando adicionar imagens reais */}
-                <div className="w-full h-full flex items-center justify-center text-white text-center p-6 sm:p-8">
-                  <div>
-                    <p className="text-base sm:text-lg mb-2">Foto de {member.name}</p>
-                    <p className="text-xs sm:text-sm text-gray-300">Adicionar em: public{member.image}</p>
-                  </div>
-                </div>
-                {/* Descomente quando adicionar as fotos:
+              <div className="aspect-square w-full max-w-sm sm:max-w-md mx-auto rounded-2xl overflow-hidden relative">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
                   className="object-cover"
                 />
-                */}
               </div>
               
               {/* Botões de navegação */}
