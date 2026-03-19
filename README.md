@@ -63,14 +63,9 @@ neutral.light = '#F5F7FA'  // Cinza claro (fundos alternados)
 
 ---
 
-## Como rodar
+## Onde Acessar:
 
-```bash
-npm install
-npm run dev       # http://localhost:3000
-npm run build     # Build de produção
-npm start         # Servidor de produção
-```
+https://max-solutions.vercel.app/
 
 ---
 
