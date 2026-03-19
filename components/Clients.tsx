@@ -1,14 +1,47 @@
 'use client';
 
 import { useState } from 'react';
-import { TrendingUp, Target, DollarSign, ChevronLeft, ChevronRight } from 'lucide-react';
+import { TrendingUp, Target, DollarSign, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Clients() {
   const [showPrints, setShowPrints] = useState(false);
+  const [mobileModal, setMobileModal] = useState(false);
+
+  const handleVerPrints = () => {
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      setMobileModal(true);
+    } else {
+      setShowPrints(true);
+    }
+  };
 
   return (
     <section id="clientes" className="py-16 sm:py-20 md:py-24 bg-neutral-light text-primary-dark overflow-hidden">
+
+      {/* Modal fullscreen para mobile */}
+      {mobileModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center md:hidden"
+          style={{ backdropFilter: 'blur(8px)', backgroundColor: 'rgba(0,0,0,0.85)' }}
+        >
+          <button
+            onClick={() => setMobileModal(false)}
+            className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all"
+            aria-label="Fechar"
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <div className="w-full h-full flex items-center justify-center p-4">
+            <Image
+              src="/result_tudo_prata.png"
+              alt="Resultados Tudo Pratas"
+              width={1200}
+              height={800}
+              className="max-w-full max-h-screen object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1600px] mx-auto">
           <div className="text-center mb-10 sm:mb-12 px-4">
@@ -132,7 +165,7 @@ export default function Clients() {
                 Ver Resultados
               </button>
               <button
-                onClick={() => setShowPrints(true)}
+                onClick={handleVerPrints}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all ${
                   showPrints 
                     ? 'bg-primary-green text-primary-dark' 
@@ -154,11 +187,11 @@ export default function Clients() {
                 aria-label="Ver resultados"
               />
               <button
-                onClick={() => setShowPrints(true)}
+                onClick={() => { setShowPrints(true); handleVerPrints(); }}
                 className={`h-2 rounded-full transition-all ${
                   showPrints ? 'w-8 bg-primary-green' : 'w-2 bg-gray-300 hover:bg-gray-400'
                 }`}
-                aria-label="Ver depoimento"
+                aria-label="Ver prints"
               />
             </div>
           </div>
