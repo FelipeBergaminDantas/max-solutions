@@ -64,14 +64,6 @@ export default function Clients() {
                 <div className="w-full flex-shrink-0 pr-4 sm:pr-6 md:pr-8">
                   <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
                     <div>
-                      <div className="flex flex-wrap gap-3 mb-4">
-                        <div className="inline-block bg-primary-blue/10 text-primary-blue px-4 py-2 rounded-full text-sm md:text-base font-semibold">
-                          Loja: Tudo Pratas
-                        </div>
-                        <div className="inline-block bg-primary-green/10 text-primary-green px-4 py-2 rounded-full text-sm md:text-base font-semibold">
-                          Segmento: Joias e Anéis
-                        </div>
-                      </div>
                       
                       <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-primary-dark">
                         Conta estagnada transformada em operação de alta performance
