@@ -69,7 +69,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-white mb-4">7. Contato</h2>
               <p>
                 Para questões sobre estes termos, entre em contato através de 
-                contato@maxsolutions.com.br
+                max.mlconsult@gmail.com
               </p>
             </section>
 

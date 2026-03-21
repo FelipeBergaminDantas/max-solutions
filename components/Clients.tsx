@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { TrendingUp, Target, DollarSign, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Image from 'next/image';
 
@@ -106,21 +106,26 @@ export default function Clients() {
                         <ResultCard
                           icon={<TrendingUp className="w-7 h-7 md:w-8 md:h-8" />}
                           label="Quantidade de Vendas"
-                          value="+114%"
+                          prefix="+"
+                          target={114}
+                          suffix="%"
                           description="Aumento na quantidade de vendas"
                           color="green"
                         />
                         <ResultCard
                           icon={<Target className="w-7 h-7 md:w-8 md:h-8" />}
                           label="Faturamento Bruto"
-                          value="+85%"
+                          prefix="+"
+                          target={85}
+                          suffix="%"
                           description="Crescimento no faturamento bruto"
                           color="blue"
                         />
                         <ResultCard
                           icon={<DollarSign className="w-7 h-7 md:w-8 md:h-8" />}
                           label="Taxa de Conversão"
-                          value="2x"
+                          target={2}
+                          suffix="x"
                           description="De 2,7% para 5,4% de conversão"
                           color="green"
                         />
@@ -206,21 +211,69 @@ function ResultCard({
   label, 
   value, 
   description, 
-  color 
+  color,
+  prefix,
+  target,
+  suffix,
 }: { 
   icon: React.ReactNode; 
   label: string; 
-  value: string; 
+  value?: string; 
   description: string;
   color: 'green' | 'blue';
+  prefix?: string;
+  target?: number;
+  suffix?: string;
 }) {
+  const [count, setCount] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const animated = useRef(false);
+
+  useEffect(() => {
+    if (target === undefined) return;
+    const node = ref.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || animated.current) return;
+      animated.current = true;
+      setVisible(true);
+      const duration = 2400;
+      const start = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 4);
+        setCount(Math.floor(eased * target));
+        if (p < 1) requestAnimationFrame(tick);
+        else setCount(target);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.3 });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [target]);
+
   const colorClass = color === 'green' ? 'text-primary-green' : 'text-primary-blue';
   
   return (
-    <div className="bg-gradient-to-br from-primary-dark to-primary-blue rounded-xl p-5 md:p-6 hover:shadow-lg transition-all text-white">
+    <div ref={ref} className="bg-gradient-to-br from-primary-dark to-primary-blue rounded-xl p-5 md:p-6 hover:shadow-lg transition-all text-white">
       <div className={`${colorClass} mb-3`}>{icon}</div>
       <div className="text-sm md:text-base text-gray-300 mb-1">{label}</div>
-      <div className="text-3xl md:text-4xl font-bold mb-1">{value}</div>
+      {target !== undefined ? (
+        <div className="overflow-hidden h-10 md:h-12 mb-1">
+          <div
+            className="text-3xl md:text-4xl font-bold transition-all duration-700 ease-out"
+            style={{
+              transform: visible ? 'translateY(0)' : 'translateY(100%)',
+              opacity: visible ? 1 : 0,
+            }}
+          >
+            {prefix}{count}{suffix}
+          </div>
+        </div>
+      ) : (
+        <div className="text-3xl md:text-4xl font-bold mb-1">{value}</div>
+      )}
       <div className="text-sm md:text-base text-gray-300">{description}</div>
     </div>
   );

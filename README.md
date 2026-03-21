@@ -72,7 +72,7 @@ https://max-solutions.vercel.app/
 ## Contato
 
 - WhatsApp: +55 11 94762-8089
-- Email: contato@maxsolutions.com.br
+- Email: max.mlconsult@gmail.com
 
  ## Desenvolvedor:
  Felipe Bergamin Dantas

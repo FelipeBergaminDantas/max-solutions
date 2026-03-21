@@ -66,7 +66,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-white mb-4">6. Contato</h2>
               <p>
                 Para questões sobre esta política de privacidade, entre em contato através de 
-                contato@maxsolutions.com.br
+                max.mlconsult@gmail.com
               </p>
             </section>
 

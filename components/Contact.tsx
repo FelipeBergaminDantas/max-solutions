@@ -31,8 +31,8 @@ export default function Contact() {
             <ContactCard
               icon={<Mail className="w-8 h-8 md:w-10 md:h-10" />}
               title="Email"
-              description="contato@maxsolutions.com.br"
-              link="https://mail.google.com/mail/?view=cm&to=contato@maxsolutions.com.br"
+              description="max.mlconsult@gmail.com"
+              link="https://mail.google.com/mail/?view=cm&to=max.mlconsult@gmail.com"
               linkText="Enviar email"
             />
           </div>

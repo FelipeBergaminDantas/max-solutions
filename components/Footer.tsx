@@ -55,8 +55,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://mail.google.com/mail/?view=cm&to=contato@maxsolutions.com.br" className="hover:text-primary-green transition-colors">
-                  contato@maxsolutions.com.br
+                <a href="https://mail.google.com/mail/?view=cm&to=max.mlconsult@gmail.com" className="hover:text-primary-green transition-colors">
+                  max.mlconsult@gmail.com
                 </a>
               </li>
             </ul>

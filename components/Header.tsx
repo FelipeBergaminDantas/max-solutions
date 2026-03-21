@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,30 +19,33 @@ export default function Header() {
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[rgba(5,15,30,0.95)] backdrop-blur-lg shadow-lg border-b border-white/5' 
-          : 'bg-[rgba(5,15,30,0.8)] backdrop-blur-md border-b border-white/5'
+          ? 'bg-[#F5F7FA] shadow-lg border-b border-black/10' 
+          : 'bg-[#F5F7FA] border-b border-black/10'
       }`}
       style={{
-        boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.3)' : '0 2px 10px rgba(0,0,0,0.2)'
+        boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.1)' : '0 2px 10px rgba(0,0,0,0.05)'
       }}
     >
-      <nav className="container mx-auto px-6 py-4 max-w-7xl">
+      <nav className="container mx-auto px-2 py-3 max-w-7xl">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl md:text-2xl font-bold hover:opacity-90 transition-opacity">
-            Max <span className="text-primary-green">Solutions & Performance</span>
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity shadow-lg rounded-xl px-3 py-1">
+            <Image src="/logo - header.png" alt="Max Solutions & Performance" width={88} height={88} className="object-contain" />
+            <span className="text-xl md:text-2xl font-bold text-[#0B1C2D]">
+              <span className="text-primary-green">Solutions & Performance</span>
+            </span>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#empresa" className="text-sm font-medium hover:text-primary-green transition-colors">
+            <Link href="#empresa" className="text-sm font-medium text-[#0B1C2D] hover:text-primary-green transition-colors">
               A Empresa
             </Link>
-            <Link href="#diferenciais" className="text-sm font-medium hover:text-primary-green transition-colors">
+            <Link href="#diferenciais" className="text-sm font-medium text-[#0B1C2D] hover:text-primary-green transition-colors">
               Diferenciais
             </Link>
-            <Link href="#sobre-nos" className="text-sm font-medium hover:text-primary-green transition-colors">
+            <Link href="#sobre-nos" className="text-sm font-medium text-[#0B1C2D] hover:text-primary-green transition-colors">
               A Liderança
             </Link>
-            <Link href="#clientes" className="text-sm font-medium hover:text-primary-green transition-colors">
+            <Link href="#clientes" className="text-sm font-medium text-[#0B1C2D] hover:text-primary-green transition-colors">
               Resultados
             </Link>
             <Link 

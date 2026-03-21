@@ -18,24 +18,21 @@ function MetricCard({ icon, prefix = '', target, suffix = '', label }: {
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting || animated.current) return;
       animated.current = true;
       setVisible(true);
-
       const duration = 2400;
       const start = performance.now();
       const tick = (now: number) => {
         const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 4);
+        const eased = 1 - Math.pow(1 - p, 4);
         setCount(Math.floor(eased * target));
         if (p < 1) requestAnimationFrame(tick);
         else setCount(target);
       };
       requestAnimationFrame(tick);
     }, { threshold: 0.3 });
-
     observer.observe(node);
     return () => observer.disconnect();
   }, [target]);
